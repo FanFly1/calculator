@@ -1,0 +1,31 @@
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Error: Division by zero!"
+    return x // y
+
+print("Calculator Started")
+
+while True:
+    a = int(input("\nEnter the first number: "))
+    b = int(input("Enter the second number: "))
+    action = input("Choose an action (+, -, *, /): ")
+
+    if action == "+":
+        print(f"Result: {add(a, b)}")
+    elif action == "-":
+        print(f"Result: {subtract(a, b)}")
+    elif action == "*":
+        print(f"Result: {multiply(a, b)}")
+    elif action == "/":
+        print(f"Result: {divide(a, b)}")
+    else:
+        print("Unknown action! Please try again.")
